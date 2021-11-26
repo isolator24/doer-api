@@ -75,6 +75,7 @@ const BootcampSchema = new mongoose.Schema({
     },
     averageCost: {
         type: Number,
+        default: 0
     },
     photo: {
         type: String,
@@ -99,6 +100,11 @@ const BootcampSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: true
     }
 },{
     toJSON: { virtuals: true },
