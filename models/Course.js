@@ -58,7 +58,7 @@ CourseSchema.statics.getAverageCost = async function(bootcampId){
     ]);
 
     // Double check the output : delete when confident
-    console.log(obj);
+    //console.log(obj);
 
     try {
         await this.model('Bootcamp').findByIdAndUpdate(bootcampId, {
